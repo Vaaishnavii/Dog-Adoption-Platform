@@ -1,0 +1,177 @@
+/* General Styling */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f8f5; /* Light pastel green */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header */
+.quiz-header {
+    background: linear-gradient(45deg, #2e7d32, #4caf50); /* Gradient for a modern look */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in for the header */
+}
+
+.quiz-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quiz-header p {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Quiz Form Container */
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Full height minus header and footer */
+    padding: 20px;
+}
+
+.quiz-form-container {
+    max-width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    text-align: left;
+    animation: slideIn 0.5s ease-in-out; /* Smooth slide-in effect */
+}
+
+/* Form Labels and Inputs */
+form .form-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+form .form-select {
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form .form-select:focus {
+    border-color: #44c767;
+    box-shadow: 0 0 5px rgba(68, 199, 103, 0.5);
+    outline: none;
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #ffcc00, #e6b800); /* Gradient effect for the bar */
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    transition: width 0.4s ease-in-out, background 0.3s ease; /* Smooth progress effect */
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, #ffcc00, #ffa000);
+    border: none;
+    font-size: 1.2rem;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Button shadow for a 3D effect */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffa000, #e67e22); /* Lighter hover effect */
+    transform: scale(1.05);
+    color: black;
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20; /* Darker green for footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .quiz-header p {
+        font-size: 1rem;
+    }
+
+    .quiz-form-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    form .form-label {
+        font-size: 1rem;
+    }
+
+    form .form-select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

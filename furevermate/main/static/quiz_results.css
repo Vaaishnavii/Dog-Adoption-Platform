@@ -1,0 +1,176 @@
+/* General Styling */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header */
+.results-header {
+    background: linear-gradient(45deg, #2e7d32, #4caf50); /* Smooth gradient */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.results-header h1 {
+    font-size: 3rem; /* Slightly larger heading */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.results-header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Results Container */
+.results-container {
+    padding: 40px 20px;
+}
+
+/* Section Headings */
+.results-container h2,
+.results-container h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.results-container h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.results-container h3 {
+    font-size: 2rem;
+    color: #2e7d32;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 15px; /* Softer corners for cards */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 2px solid #f0f0f0; /* Subtle separation line */
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn-outline-primary {
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px 18px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .results-header p {
+        font-size: 1.1rem;
+    }
+
+    .results-container {
+        padding: 20px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+
+    .btn-outline-primary {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Animations for Enhanced UX */
+.card:hover img {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.results-header h1,
+.results-header p {
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

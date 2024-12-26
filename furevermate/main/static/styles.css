@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #05370c;
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #d3d3d3;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #053501;
+}
+
+.navbar-toggler {
+    border-color: #053501;
+}
+
+/* Shadow */
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/static/adopt.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+/* Features Section */
+.features {
+    background-color: #d1f1c2;
+    padding: 50px 0;
+    border-top: 2px solid #d1f1c2;
+}
+
+/* Feature Cards */
+.feature-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+.blockquote {
+    border-left: 5px solid #9be46382;
+    font-style: italic;
+    background-color: #bef89182;
+}
+
+.blockquote-footer {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Buttons */
+.btn-warning {
+    background-color: #0a4103;
+    color: white;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #085f02;
+}

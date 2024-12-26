@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:rgba(207, 233, 192, 0.95);
+    
+}
+
+/* Register Container */
+.register-container {
+    background: rgba(255, 255, 255, 0.95); /* Increased opacity for better readability */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    text-align: center;
+    width: 400px;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Increased font size for emphasis */
+    color: #264653;
+    font-weight: bold;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 20px; /* Increased spacing for better layout */
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px; /* More spacing for clarity */
+    color: #2a9d8f;
+    font-weight: bold; /* Bold for emphasis */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Increased padding for better usability */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Softer rounded corners */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+input:focus {
+    border-color: #2a9d8f;
+    outline: none;
+    box-shadow: 0 0 8px rgba(42, 157, 143, 0.6); /* Stronger focus effect */
+}
+
+/* Error Message Styles */
+.error {
+    color: #e63946; /* Red color for errors */
+    font-size: 0.9rem; /* Slightly smaller font */
+    margin-top: 5px; /* Space between input and error */
+    text-align: left;
+}
+
+/* Button Styles */
+.btn {
+    background: linear-gradient(45deg, #2a9d8f, #1d3557);
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Enhanced padding for click area */
+    border-radius: 8px; /* Softer button corners */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Added transform for hover */
+    width: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1d3557, #2a9d8f);
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Toggle Text */
+.toggle-text {
+    margin-top: 20px; /* Added more space */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.toggle-text a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.toggle-text a:hover {
+    color: #1d3557; /* Darker hover color */
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+    .register-container {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    input {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Furever Mate</title>
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <div class="form-box">
+            <h2>Create an Account</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" value="{{ form.username.value|default:'' }}" required>
+                    {% if form.username.errors %}
+                        <p class="error">{{ form.username.errors.0 }}</p>
+                    {% endif %}
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" value="{{ form.email.value|default:'' }}" required>
+                    {% if form.email.errors %}
+                        <p class="error">{{ form.email.errors.0 }}</p>
+                    {% endif %}
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    {% if form.password.errors %}
+                        <p class="error">{{ form.password.errors.0 }}</p>
+                    {% endif %}
+                </div>
+                <div class="input-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+                {% if form.non_field_errors %}
+                    <p class="error">{{ form.non_field_errors.0 }}</p>
+                {% endif %}
+                <button type="submit" class="btn">Register</button>
+                <p class="toggle-text">
+                    Already have an account? <a href="{% url 'login' %}">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

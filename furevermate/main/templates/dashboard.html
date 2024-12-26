@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Furever Mate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="mb-0">Furever Mate</h1>
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <!-- Welcome Message -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Welcome, {{ user.username }}</h2>
+            <p class="text-muted">Here is an overview of your saved and adopted dogs. Keep exploring for more furry friends!</p>
+            <a href="{% url 'quiz' %}" class="btn btn-success mt-3">Take Compatibility Quiz</a>
+        </div>
+
+        <!-- Saved Dogs Section -->
+        <section class="mb-5">
+            <h3 class="text-center text-primary mb-3">Your Saved Dogs</h3>
+            {% if saved_dogs %}
+                <div class="row g-4">
+                    {% for saved in saved_dogs %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-sm">
+                            <img src="{% static saved.dog.image %}" class="card-img-top" alt="Image of {{ saved.dog.name }}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ saved.dog.name }}</h5>
+                                <p class="card-text">
+                                    <strong>Breed:</strong> {{ saved.dog.breed }}<br>
+                                    <strong>Age:</strong> {{ saved.dog.age }} years<br>
+                                    <strong>Traits:</strong> {{ saved.dog.traits }}
+                                </p>
+                                <button class="btn btn-outline-primary">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-center text-muted">No saved dogs yet. Browse and save your favorites!</p>
+            {% endif %}
+        </section>
+
+        <!-- Adopted Dogs Section -->
+        <section class="mb-5">
+            <h3 class="text-center text-success mb-3">Your Adopted Dogs</h3>
+            {% if adopted_dogs %}
+                <div class="row g-4">
+                    {% for adopted in adopted_dogs %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow-sm">
+                            <img src="{% static adopted.dog.image %}" class="card-img-top" alt="Image of {{ adopted.dog.name }}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ adopted.dog.name }}</h5>
+                                <p class="card-text">
+                                    <strong>Breed:</strong> {{ adopted.dog.breed }}<br>
+                                    <strong>Age:</strong> {{ adopted.dog.age }} years<br>
+                                    <strong>Traits:</strong> {{ adopted.dog.traits }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-center text-muted">No adopted dogs yet. Find your perfect match!</p>
+            {% endif %}
+        </section>
+
+        <!-- Explore More Section -->
+        <section class="text-center">
+            <h3 class="text-primary mb-3">Explore More Dogs</h3>
+            <p class="text-muted">Check out our collection of adorable dogs waiting for a home.</p>
+            <a href="{% url 'browse' %}" class="btn btn-primary">Browse Dogs</a>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2024 Furever Mate. All rights reserved.</p>
+    </footer>
+</body>
+</html>
